@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val colorSquare = findViewById<View>(R.id.colorSquare)
         val buttonChangeColor = findViewById<Button>(R.id.buttonChangeColor)
 
-        val editTextNumber = findViewById<EditText>(R.id.editTextNumber)
+        val editTextNumber = findViewById<TextView>(R.id.textMessage)
         val buttonChangeNumber = findViewById<Button>(R.id.buttonChangeNumber)
 
         colorSquare.setBackgroundColor(colors[currentColorIndex])
@@ -37,12 +38,12 @@ class MainActivity : AppCompatActivity() {
 
         editTextNumber.setText(currentNumber.toString())
 
-        buttonChangeNumber.setOnClickListener {
-            currentNumber += 7
-            if (currentNumber > 49) {
-                currentNumber = 7
-            }
-            editTextNumber.setText(currentNumber.toString())
-        }
+       buttonChangeNumber.setOnClickListener{
+           currentNumber += 7
+           if(currentNumber>49) {
+               currentNumber = 7
+           }
+           editTextNumber.setText(currentNumber.toString())
+       }
     }
 }

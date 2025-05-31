@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">createe</string>
+    <string name="change_color">Change color</string>
+    <string name="change_number">Change number</string>
 </resources>
